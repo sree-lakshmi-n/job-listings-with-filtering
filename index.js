@@ -24,7 +24,6 @@ const tempTags = fs.readFileSync(
 const data = JSON.parse(
   fs.readFileSync(`${__dirname}/public/assets/data.json`)
 );
-console.log(data[0].logo);
 app.get("/", (req, res) => {
   res.writeHead(200, {
     "Content-type": "text/html",
