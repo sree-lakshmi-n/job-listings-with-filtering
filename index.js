@@ -1,7 +1,10 @@
 const fs = require("fs");
 const express = require("express");
 const app = express();
+const replaceTemplate = require("./modules/replaceTemplate");
 
+app.use(express.static("public"));
+app.use("/images", express.static("images"));
 // Read templates
 const tempOverview = fs.readFileSync(
   `${__dirname}/views/template-overview.html`,
@@ -13,12 +16,17 @@ const tempCard = fs.readFileSync(
 );
 
 // Read data
-const data = JSON.parse(
-  fs.readFileSync(`${__dirname}/public/assets/data.json`)
-);
-
+const data = JSON.parse(fs.readFileSync(`${__dirname}/assets/data.json`));
+console.log(data[0].logo);
 app.get("/", (req, res) => {
-  res.end(JSON.stringify(data));
+  res.writeHead(200, {
+    "Content-type": "text/html",
+  });
+  const itemCards = data.map((item) => {
+    return replaceTemplate(tempCard, item);
+  });
+  const output = tempOverview.replace(/{%ITEM_CARDS%}/g, itemCards);
+  res.end(output);
 });
 
 const port = 3000;
