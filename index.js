@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const replaceTemplate = require("./modules/replaceTemplate");
 
-app.use(express.static("public"));
-app.use("/images", express.static("images"));
+app.use(express.static("./assets/images"));
+app.use("/images", express.static("./assets/images"));
 // Read templates
 const tempOverview = fs.readFileSync(
   `${__dirname}/views/template-overview.html`,
