@@ -5,12 +5,32 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: hsl(180deg, 52%, 96%);
+}
+
+.top-banner {
+  background-color: hsl(180deg, 29%, 50%);
+  background-image: url(../../assets/images/bg-header-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 12rem;
+  width: 100%;
+  margin-bottom: 6.4rem;
+}
+@media screen and (max-width: 800px) {
+  .top-banner {
+    background-image: url(../../assets/images/bg-header-mobile.svg);
+  }
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: "League Spartan", sans-serif;
+  font-size: 1.6rem;
   line-height: 1;
 }
 
