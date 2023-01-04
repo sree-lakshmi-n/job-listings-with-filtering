@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^19.3.0",
+    "sass": "^1.57.1"
+  },
+  "name": "job-listings-with-filtering",
+  "description": "![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass --watch sass/main.scss styles/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
