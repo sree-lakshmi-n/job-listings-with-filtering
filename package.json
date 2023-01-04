@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-sass": "sass --watch sass/main.scss styles/styles.css"
+    "compile-sass": "sass --watch sass/main.scss styles/styles.css",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC"
