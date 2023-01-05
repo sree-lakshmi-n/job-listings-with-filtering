@@ -8,9 +8,9 @@ module.exports = (temp, tempTags, tempSkills, item) => {
   output = output.replace(/{%CONTRACT%}/g, item.contract);
   output = output.replace(/{%LOCATION%}/g, item.location);
 
-  let skills = [...item.languages, ...item.tools];
+  let skills = [item.role, item.level, ...item.languages, ...item.tools];
   skills = skills.map((skill) => {
-    return tempSkills.replace(/{%SKILL%}/g, skill.toLowerCase());
+    return tempSkills.replace(/{%SKILL%}/g, skill);
   });
   output = output.replace(/{%SKILLS%}/g, skills.join(""));
 
