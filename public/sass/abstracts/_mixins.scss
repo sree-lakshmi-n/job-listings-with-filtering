@@ -8,3 +8,12 @@
   align-items: center;
   gap: $gap;
 }
+@mixin absolute-position-half-outside-v-top {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
