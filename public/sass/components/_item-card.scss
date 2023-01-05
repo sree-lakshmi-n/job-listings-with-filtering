@@ -10,11 +10,28 @@
   &:has(.featured) {
     border-left: 0.4rem solid $desaturated-dark-cyan;
   }
+
+  .card__logo-box {
+    .card__logo {
+      width: 8.4rem;
+      height: 8.4rem;
+    }
+  }
+
   @media screen and (max-width: 800px) {
     width: 90%;
     margin-bottom: 4.8rem;
+    padding: 3.6rem 2.4rem 1.6rem;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
+
+    .card__logo-box {
+      @include absolute-position-half-outside-v-top;
+      .card__logo {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
   }
 }
