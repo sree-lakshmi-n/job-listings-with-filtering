@@ -63,7 +63,7 @@
       list-style: none;
       @include flex-center-v;
 
-      li + li::before {
+      .role-detail + .role-detail::before {
         content: "•";
         margin-right: 0.8rem;
       }
