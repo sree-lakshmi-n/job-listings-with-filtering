@@ -20,7 +20,7 @@ const tempTags = fs.readFileSync(
   "utf-8"
 );
 const tempSkills = fs.readFileSync(
-  `${__dirname}/views/template-skills-span.html`,
+  `${__dirname}/views/template-skill.html`,
   "utf-8"
 );
 
