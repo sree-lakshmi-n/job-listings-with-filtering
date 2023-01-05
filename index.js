@@ -19,6 +19,10 @@ const tempTags = fs.readFileSync(
   `${__dirname}/views/template-tags.html`,
   "utf-8"
 );
+const tempSkills = fs.readFileSync(
+  `${__dirname}/views/template-skills-span.html`,
+  "utf-8"
+);
 
 // Read data
 const data = JSON.parse(
@@ -29,7 +33,7 @@ app.get("/", (req, res) => {
     "Content-type": "text/html",
   });
   const itemCards = data.map((item) => {
-    return replaceTemplate(tempCard, tempTags, item);
+    return replaceTemplate(tempCard, tempTags, tempSkills, item);
   });
 
   const output = tempOverview.replace(/{%ITEM_CARDS%}/g, itemCards);
