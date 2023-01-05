@@ -8,6 +8,11 @@
   align-items: center;
   gap: $gap;
 }
+@mixin flex-dirn-v($gap: 1.2rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
 @mixin absolute-position-half-outside-v-top {
   position: absolute;
   top: 0;
