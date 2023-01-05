@@ -3,17 +3,18 @@
     <img class="card__logo" src="{%COMPANY_LOGO%}" alt="company logo" />
   </div>
   <div class="card__role-box">
-    <p class="card__role-company">{%COMPANY_NAME%}</p>
-    <div class="card__role-tags">
-      {%TAGS%}
-      <p class="card__role-position">{%POSITION%}</p>
-      <div class="card__role-details">
-        <p class="role-posted-at">{%POSTED_AT%}</p>
-        <p class="role-contract">{%CONTRACT%}</p>
-        <p class="role-location">{%LOCATION%}</p>
-      </div>
+    <div class="card__role-info">
+      <p class="card__role-company">{%COMPANY_NAME%}</p>
+      <div class="card__role-tags">{%TAGS%}</div>
     </div>
+    <p class="card__role-position">{%POSITION%}</p>
+    <ul class="card__role-details">
+      <li class="role-posted-at">{%POSTED_AT%}</li>
+      <li class="role-contract">{%CONTRACT%}</li>
+      <li class="role-location">{%LOCATION%}</li>
+    </ul>
   </div>
+
   <div class="card__role-skills-box">
     <ul class="skills">
       {%SKILLS%}
