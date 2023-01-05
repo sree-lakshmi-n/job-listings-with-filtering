@@ -1,13 +1,18 @@
 // exporting function to replace template
 
-module.exports = (temp, tempTags, item) => {
+module.exports = (temp, tempTags, tempSkills, item) => {
   let output = temp.replace(/{%COMPANY_NAME%}/g, item.company);
   output = output.replace(/{%COMPANY_LOGO%}/g, `${item.logo}`);
   output = output.replace(/{%POSITION%}/g, item.position);
   output = output.replace(/{%POSTED_AT%}/g, item.postedAt);
   output = output.replace(/{%CONTRACT%}/g, item.contract);
   output = output.replace(/{%LOCATION%}/g, item.location);
-  output = output.replace(/{%SKILLS%}/g, [...item.languages, ...item.tools]);
+
+  let skills = [...item.languages, ...item.tools];
+  skills = skills.map((skill) => {
+    return tempSkills.replace(/{%SKILL%}/g, skill.toLowerCase());
+  });
+  output = output.replace(/{%SKILLS%}/g, skills.join(""));
 
   // adding tags
   if (item.new && item.featured) {
