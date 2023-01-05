@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
 * {
   margin: 0;
@@ -52,11 +53,86 @@ body {
   width: 8.4rem;
   height: 8.4rem;
 }
+.item-card .card__role-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.item-card .card__role-box .card__role-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: hsl(180deg, 29%, 50%);
+}
+.item-card .card__role-box .card__role-info .card__role-tags .tags {
+  padding: 0.6rem 1.2rem 0.4rem;
+  border-radius: 1.6rem;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.item-card .card__role-box .card__role-info .card__role-tags .new {
+  background-color: hsl(180deg, 29%, 50%);
+}
+.item-card .card__role-box .card__role-info .card__role-tags .new::after {
+  content: "!";
+}
+.item-card .card__role-box .card__role-info .card__role-tags .featured {
+  background-color: hsl(180deg, 14%, 20%);
+}
+.item-card .card__role-box .card__role-position {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(180deg, 14%, 20%);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.item-card .card__role-box .card__role-position:hover {
+  color: hsl(180deg, 29%, 50%);
+}
+.item-card .card__role-box .card__role-details {
+  color: hsl(180deg, 8%, 52%);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.item-card .card__role-box .card__role-details li + li::before {
+  content: "•";
+  margin-right: 0.8rem;
+}
+.item-card .card__role-skills-box {
+  margin-left: auto;
+}
+.item-card .card__role-skills-box .skills {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.item-card .card__role-skills-box .skills .skill {
+  list-style: none;
+  text-transform: capitalize;
+  color: hsl(180deg, 29%, 50%);
+  background-color: hsl(180deg, 31%, 95%);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+.item-card .card__role-skills-box .skills .skill:hover {
+  color: hsl(180deg, 31%, 95%);
+  background-color: hsl(180deg, 29%, 50%);
+}
+@media screen and (max-width: 800px) {
+  .item-card .card__role-skills-box {
+    margin-left: unset;
+  }
+}
 @media screen and (max-width: 800px) {
   .item-card {
     width: 90%;
     margin-bottom: 4.8rem;
-    padding: 3.6rem 2.4rem 1.6rem;
+    padding: 3.6rem 2.4rem 2.4rem;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
