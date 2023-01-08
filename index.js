@@ -22,22 +22,11 @@ const tempSkills = fs.readFileSync(
   `${__dirname}/views/template-skill.html`,
   "utf-8"
 );
-const tempSearchBar = fs.readFileSync(
-  `${__dirname}/views/template-search-bar.html`,
-  "utf-8"
-);
-const tempSearchFilter = fs.readFileSync(
-  `${__dirname}/views/template-search-filter.html`,
-  "utf-8"
-);
 
 // Read data
 const data = JSON.parse(
   fs.readFileSync(`${__dirname}/public/assets/data.json`)
 );
-
-// Search bar added
-tempOverview.replace(/{%SEARCH_BAR%}/g, tempSearchBar);
 
 // Initial Page Setup
 const pageSetup = (req, res) => {
@@ -48,7 +37,6 @@ const pageSetup = (req, res) => {
     return replaceTemplate(tempCard, tempTags, tempSkills, item);
   });
   const output = tempOverview.replace(/{%ITEM_CARDS%}/g, itemCards);
-
   res.end(output.split(",").join(" "));
 };
 
