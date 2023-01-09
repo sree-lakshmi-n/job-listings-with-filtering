@@ -10,4 +10,5 @@
   padding: 1.2rem 3.2rem;
   @include flex-center-v($gap: 0.8rem);
   flex-wrap: wrap;
+  color: $desaturated-dark-cyan;
 }
