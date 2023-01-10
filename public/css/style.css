@@ -176,6 +176,11 @@ body {
   height: 5rem;
   overflow: scroll;
 }
+@media screen and (max-width: 800px) {
+  .search-bar {
+    width: 90%;
+  }
+}
 
 .btn-clear {
   color: inherit;

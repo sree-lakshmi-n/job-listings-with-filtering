@@ -13,4 +13,8 @@
   color: $desaturated-dark-cyan;
   height: 5rem;
   overflow: scroll;
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 }
