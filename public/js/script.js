@@ -6,6 +6,9 @@ $(document).ready(function () {
     createSkillItem(skillItem);
     filterSkills(skillItem);
   });
+
+  // Clear button event handler
+  $(".btn-clear").click(clearBtnHandler);
 });
 
 const hideItemCards = () => {
@@ -44,8 +47,19 @@ const createSkillItem = (skill) => {
 const closeBtnHandler = () => {
   $(".btn-close").click(function () {
     const skill = $(this).prev().text();
-    skillFilter.delete(skill);
-    filterSkills();
+    refreshFilter(skill);
     $(this).parent().remove();
   });
+};
+
+// Clear btn functionality
+const clearBtnHandler = () => {
+  const skillItem = $(".skill-items")[$(".skill-items").length - 1];
+  refreshFilter(skillItem.children[0].textContent);
+  skillItem.remove();
+};
+
+const refreshFilter = (skill) => {
+  skillFilter.delete(skill);
+  filterSkills();
 };
