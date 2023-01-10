@@ -3,6 +3,7 @@ $(document).ready(function () {
   // Displaying corresponding skill item cards on click
   $(".skill").click(function () {
     const skillItem = $(this).text();
+    createSkillItem(skillItem);
     filterSkills(skillItem);
   });
 });
@@ -22,7 +23,7 @@ const filterSkills = (skillItem) => {
 };
 
 const createSkillItem = (skill) => {
-  console.log("hi");
+  if (skillFilter.has(skill)) return;
   const skillItem = document.createElement("div");
   skillItem.setAttribute("class", "skill-items");
   const skillName = document.createElement("span");
@@ -38,4 +39,3 @@ const createSkillItem = (skill) => {
   console.log(searchBar);
   searchBar.appendChild(skillItem);
 };
-createSkillItem("CSS");
