@@ -182,6 +182,7 @@ body {
   font-family: inherit;
   margin-left: auto;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .skill-items {
