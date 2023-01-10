@@ -1,0 +1,25 @@
+.skill-items {
+  background-color: $light-greyish-cyan-filter;
+
+  * {
+    padding: 0.8rem;
+  }
+
+  .btn-close {
+    background-color: $desaturated-dark-cyan;
+    color: $white;
+    font-family: inherit;
+    font-weight: $font-wt-bold;
+    border: none;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $very-dark-grayish-cyan;
+    }
+  }
+}
