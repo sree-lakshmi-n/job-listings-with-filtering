@@ -16,7 +16,7 @@ const showItemCards = (classes) => {
 };
 
 const filterSkills = (skillItem) => {
-  skillFilter.add(skillItem);
+  if (skillItem) skillFilter.add(skillItem);
   hideItemCards();
   const classes = [...skillFilter].map((skill) => `.${skill}`).join("");
   showItemCards(classes);
@@ -36,6 +36,16 @@ const createSkillItem = (skill) => {
   skillItem.appendChild(btnClose);
 
   const searchBar = document.getElementsByClassName("search-bar")[0];
-  console.log(searchBar);
   searchBar.appendChild(skillItem);
+  closeBtnHandler();
+};
+
+// Close btn functionality
+const closeBtnHandler = () => {
+  $(".btn-close").click(function () {
+    const skill = $(this).prev().text();
+    skillFilter.delete(skill);
+    filterSkills();
+    $(this).parent().remove();
+  });
 };
