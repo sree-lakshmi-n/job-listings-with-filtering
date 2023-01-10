@@ -175,6 +175,10 @@ body {
   color: hsl(180deg, 29%, 50%);
   height: 5rem;
   overflow: scroll;
+  display: none;
+}
+.search-bar:has(.skill-items) {
+  display: flex;
 }
 @media screen and (max-width: 800px) {
   .search-bar {
