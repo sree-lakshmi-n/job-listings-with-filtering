@@ -170,9 +170,11 @@ body {
   padding: 1.2rem 3.2rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.6rem;
   flex-wrap: wrap;
   color: hsl(180deg, 29%, 50%);
+  height: 5rem;
+  overflow: scroll;
 }
 
 .btn-clear {
