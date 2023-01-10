@@ -172,6 +172,16 @@ body {
   align-items: center;
   gap: 0.8rem;
   flex-wrap: wrap;
+  color: hsl(180deg, 29%, 50%);
+}
+
+.btn-clear {
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  margin-left: auto;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
